@@ -1,0 +1,74 @@
+/* ==========================================
+   KUSTOMISASI PORTOFOLIO (UTS PEMROGRAMAN WEB)
+   ========================================== */
+
+/* 1. Pengaturan Umum & Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+}
+
+/* 2. Hero Section (Bagian Atas) */
+.hero-section {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek lingkaran dekoratif di latar belakang hero */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+}
+
+/* 3. Komponen Kartu Projek (Portfolio Cards) */
+.portfolio-card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek saat kartu diarahkan oleh mouse (Hover) */
+.portfolio-card:hover {
+    transform: translateY(-10px); /* Kartu agak naik ke atas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.portfolio-card img {
+    transition: transform 0.5s ease;
+}
+
+/* Efek zoom pada gambar saat kartu di-hover */
+.portfolio-card:hover img {
+    transform: scale(1.08);
+}
+
+/* 4. Dekorasi Garis Bawah Judul Section */
+.custom-line {
+    height: 3px;
+    width: 60px;
+    background-color: #0d6efd; /* Warna biru primer Bootstrap */
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* 5. Kustomisasi Tombol & Form */
+.btn-primary {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 0 0.25rem rgba(42, 82, 152, 0.25);
+}
